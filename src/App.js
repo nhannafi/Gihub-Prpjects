@@ -67,11 +67,15 @@ class App extends Component {
                 {!isLoading && userInfos.message && <span id="message">{userInfos.message}</span>}
 
                 <div className="container-fluid" id="linear">
-                    <div className="row row-height">                        
-                        <UserInfos data={userInfos}/>
-                        <UserRepos data={userRepos}/>  
+                    <div className="container-fluid row">
+                        <div className="col-sm-4 position-relative">
+                            <UserInfos data={userInfos}/>
+                        </div>
+                        <div className="col-sm-8">
+                            <UserRepos data={userRepos}/>
+                        </div>
                     </div>
-                </div>
+                </div> 
             </div>
         )
     }

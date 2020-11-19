@@ -15,7 +15,7 @@ const Searchform = ({ handleSubmit}) => (
         />
         <input className="button" id="button" type="submit" value="Search" />
         <div className="mt-2">
-            <label className="">Show only owned repositories</label>
+            <label className="">Show only owned repos</label>
             <input type="checkbox" name="onlyOwner" id="onlyOwner" defaultChecked={true}/>
         </div>
     </form>

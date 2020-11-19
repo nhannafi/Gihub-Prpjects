@@ -5,7 +5,7 @@ const UserRepos = ({data}) => (
    
     <div className="sticky">
         <h1 >Work </h1>
-        <div id="repoGrid">
+        <div id="repos">
             {data.map(el => (
                 <Repo repo={el} key={el.id}/>
             ))}
