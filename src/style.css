@@ -35,6 +35,14 @@ a:hover,
     opacity: 1;
 }
 
+#sticky {
+    position: sticky;
+    max-height: 100vh;
+    overflow-y: scroll;
+    color: white;
+    padding: 3em 3em 3em 1.5em
+}
+
 .wrapper {
     width: 480px;
     margin: 0 auto;
@@ -50,7 +58,7 @@ a:hover,
     padding: 0;
     font: 400 1rem 'Roboto';
     letter-spacing: 0.025em;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: black;
     border: none;
 }
@@ -128,48 +136,8 @@ a:hover,
     display: inline-block;
 }
 
-.weather {
-    width: 100%;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.city {
-    text-align: left;
-    border-bottom: solid thin black;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.7);
-}
-
-.group {
-    width: 165px;
-    margin-bottom: 20px;
-    text-align: right;
-    float: right;
-    clear: both;
-}
-
-.temp {
-    font-size: 4.5em;
-    font-weight: 300;
-    line-height: 0.75;
-}
-
-.celsius,
-.fahrenheit,
-.divider {
-    font-size: 1.75rem;
-    vertical-align: super;
-}
-
 .divider {
     margin: 0 0.05em;
-}
-
-.forecast {
-    display: table;
-    text-transform: uppercase;
-    width: 100%;
 }
 
 .block {
