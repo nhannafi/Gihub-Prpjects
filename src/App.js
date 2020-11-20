@@ -18,14 +18,17 @@ class App extends Component {
 
         this.handleSubmit = this.handleSubmit.bind(this)
     }
+
     handleSubmit(e) {
         e.preventDefault()
         const data = new FormData(e.target);
-        console.log(data)
+        // console.log(data)
+        console.log(this.props)
+        
         const githubUsername = data.get('githubUsername')
         const onlyOwner = data.get('onlyOwner')
         
-
+        console.log(onlyOwner)
         this.fetchData(githubUsername, onlyOwner)
     }
 
@@ -44,6 +47,7 @@ class App extends Component {
             userRepos,
         })
     }
+
     async fetchUserInfos(githubUsername) {
         const req = await fetch(`${config.apiUrl.base}${config.apiUrl.users}${githubUsername}`);
         return await req.json()
@@ -66,9 +70,11 @@ class App extends Component {
                 {isLoading && <span id="message">Fetching Github user...</span>}
                 {!isLoading && userInfos.message && <span id="message">{userInfos.message}</span>}
 
-                <div className="container-fluid" id="linear">
+                <div className="container-fluid" id="linear" >
+                    { githubUsername && userInfos && userRepos && userInfos.message }
                     <div className="container-fluid row">
                         <div className="col-sm-4 position-relative">
+
                             <UserInfos data={userInfos}/>
                         </div>
                         <div className="col-sm-8">
@@ -80,5 +86,4 @@ class App extends Component {
         )
     }
 }
-
 export default App;
