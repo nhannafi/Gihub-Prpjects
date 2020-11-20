@@ -37,11 +37,11 @@
     }
     
     #sticky {
-        position: sticky;
+        /* position: sticky;
         max-height: 100vh;
         overflow-y: scroll;
         color: white;
-        padding: 3em 3em 3em 1.5em
+        padding: 3em 3em 3em 1.5em */
     }
     
     .wrapper {
@@ -54,20 +54,20 @@
     
     .searchbar,
     .button {
-        height: 45px;
+        /* height: 45px;
         margin: 1em 0 4em;
-        padding: 0;
+        padding: 10;
         font: 400 1rem 'Roboto';
         letter-spacing: 0.025em;
-        /* text-transform: uppercase; */
+        text-transform: uppercase; */
         color: black;
         border: none;
     }
     
     .searchbar {
-        float: left;
+        /* float: left; */
         width: 360px;
-        margin-right: 20px;
+        /* margin-right: 20px; */
         border-bottom: solid thin black;
         color: black;
     }
@@ -200,5 +200,12 @@
         }
         #linear {
             background: unset;
+        }
+        .infos {
+            position: unset;
+            top: unset;
+            left: unset;
+            transform: unset;
+            padding: 4em 0 1em 0;
         }
     }

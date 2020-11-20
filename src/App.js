@@ -71,7 +71,6 @@ class App extends Component {
                 {!isLoading && userInfos.message && <span id="message">{userInfos.message}</span>}
 
                 <div className="container-fluid" id="linear" >
-                    { githubUsername && userInfos && userRepos && userInfos.message }
                     <div className="container-fluid row">
                         <div className="col-sm-4 position-relative">
 
