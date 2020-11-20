@@ -61,7 +61,7 @@ class App extends Component {
 
     render(){
         const { githubUsername, isLoading, userInfos, userRepos } = this.state
-        return(
+        return (
             
             <div className="wrapper">
                 <Searchform 
@@ -70,6 +70,7 @@ class App extends Component {
                 {isLoading && <span id="message">Fetching Github user...</span>}
                 {!isLoading && userInfos.message && <span id="message">{userInfos.message}</span>}
 
+               
                 <div className="container-fluid" id="linear" >
                     <div className="container-fluid row">
                         <div className="col-sm-4 position-relative">
@@ -80,7 +81,8 @@ class App extends Component {
                             <UserRepos data={userRepos}/>
                         </div>
                     </div>
-                </div> 
+                </div>
+                
             </div>
         )
     }

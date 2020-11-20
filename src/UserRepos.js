@@ -3,7 +3,7 @@ import Repo from "./Repo";
 
 const UserRepos = ({data}) => (
    
-    <div className="sticky">
+    <div className="">
         <h1 >Work </h1>
         <div id="repos">
             {data.map(el => (
