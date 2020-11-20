@@ -11,8 +11,6 @@ const UserInfos = ({data}) => (
         <p className="h4 mt-3 m-0">{data.name}</p>
 
         <a href={data.html_url} target="_blank" rel="noreferrer" id="login">@{data.login}</a>
-
-        <p className="h5 mt-3">{data.bio}</p>
        
     </div>
 )
