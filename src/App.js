@@ -50,13 +50,23 @@ class App extends Component {
 
     async fetchUserInfos(githubUsername) {
         const req = await fetch(`${config.apiUrl.base}${config.apiUrl.users}${githubUsername}`);
-        return await req.json()
+        if(!req.ok){
+            return false;
+        } else{
+            return await req.json()
 
+        }
+      
     }
 
     async fetchUserRepos(githubUsername) {
         const req = await fetch(`${config.apiUrl.base}${config.apiUrl.users}${githubUsername}${config.apiUrl.repos}`);
-        return await req.json()
+        if(!req.ok){
+            return false;
+        } else{
+            return await req.json()
+        }
+       
     }
 
     render(){
@@ -74,10 +84,11 @@ class App extends Component {
                 <div className="container-fluid" id="linear" >
                     <div className="container-fluid row">
                         <div className="col-sm-4 position-relative">
-
+                        {/* {githubUsername && userInfos && userRepos && !userInfos.message } */}
                             <UserInfos data={userInfos}/>
                         </div>
                         <div className="col-sm-8">
+                        {/* {githubUsername && userInfos && userRepos && !userInfos.message } */}
                             <UserRepos data={userRepos}/>
                         </div>
                     </div>
