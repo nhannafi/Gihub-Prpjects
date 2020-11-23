@@ -1,6 +1,4 @@
 import React from 'react';
-import {faSearch} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import logo from './logo.jpg';
 
 const Searchform = ({ handleSubmit}) => (
